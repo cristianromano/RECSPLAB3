@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPLAB3</title>
+    <script src="./clases.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    
+    <div id="opcionesContenedor">
+        <div>
+          <input
+            type="checkbox"
+            checked="true"
+            id="cb_id"
+            onchange="CambiarEstadoColumna(0)"
+          />ID
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="cb_nombre"
+            checked="true"
+            onchange="CambiarEstadoColumna(1)"
+          />MARCA
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="cb_apellido"
+            checked="true"
+            onchange="CambiarEstadoColumna(2)"
+          />SERIE
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="cb_edad"
+            checked="true"
+            onchange="CambiarEstadoColumna(3)"
+          />PRECIO
+        </div>
+      </div>
+
+
+    <table id="tabla" class="grillaTabla">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Marca</th>
+          <th>Serie</th>
+          <th>Precio</th>
+          <!-- <th>Sexo</th> -->
+        </tr>
+      </thead>
+      <tbody id="cuerpo"></tbody>
+    </table>
+
+    <div id="formContenedor">
+      <div class="row">
+        <p>ID:</p>
+        <input type="text" id="id" disabled />
+      </div>
+      <div class="row">
+        <p>MARCA</p>
+        <input type="text" id="marca" />
+      </div>
+      <div class="row">
+        <p>SERIE</p>
+        <input type="text" id="serie" />
+      </div>
+      <div class="row">
+        <p>PRECIO</p>
+        <input type="text" id="precio" />
+      </div>
+      <div class="row">
+        <p>TIPO</p>
+        <select id="tipo" onchange="PorTipo()" >
+          <option value="Auto">Auto</option>
+          <option value="Camioneta" selected>Camioneta</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <p id = "parrafoOculto" hidden >MOVIL</p>
+        <input type="text" id = "claseOculta" hidden >
+      </div>
+
+     
+    </div>
+
+    <div id="botonesPantalla">
+      <div class="btn-Importantes" id="botonAgregar">
+        <input
+          type="button"
+          class="btn-promedio"
+          value="Agregar"
+          onclick="agregarCliente()"
+        />
+      </div>
+      <div class="btn-Importantes" id="botonBorrar">
+        <input type="button" class="btn-promedio" value="Eliminar" />
+      </div>
+    </div>
+
+    <div id="filtros">
+        <h1>FILTROS</h1>
+     
+        <p>Filtrar por:</p>
+        <select id="sexo_filtro" onchange="filtroSexo()">
+          <option value="Auto">Auto</option>
+          <option value="Camioneta" selected>Camioneta</option>
+        </select>
+        <input
+          class="btn-borrar"
+          type="button"
+          value="x"
+          onclick="LimpiarFiltro()"
+        />
+      
+        <div class="row">  <p>Promedio Precio:</p> <input type="text" id="prom"/> </select></div>  
+        <div class="row">  <input  type="button"  class="btn-promedio" value="Calcular promedio" onclick="calcularPromedio()"  /></div> 
+
+    </div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,74 @@
+table,
+th,
+td {
+  border: 1px solid lightcoral;
+  text-align: center;
+  border-collapse: collapse;
+  /* border-spacing: 3px; */
+  padding: 5px;
+}
+
+table {
+  width: 50%;
+  margin: auto;
+}
+
+
+#formContenedor{
+
+
+  text-align: center;
+  border-collapse: collapse;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  margin: 4px;
+  
+}
+
+#opcionesContenedor{
+
+  background-color: lightcoral;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: stretch;
+  margin: 4px;
+
+  
+}
+
+#filtros{
+
+  background-color: lightblue;
+  text-align: center;
+  border-collapse: collapse;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: center;
+  
+}
+
+
+#botonesPantalla{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  margin: 4px;
+}
